@@ -14,29 +14,3 @@ export const getToyById = async (id) => {
   return data;
 };
 
-
-// Đăng ký user trực tiếp lên Supabase Auth
-export const registerUser = async ({ email, password, fullName, phone }) => {
-  const { data, error } = await supabase.auth.signUp({
-    email,
-    password,
-    options: {
-      data: {
-        full_name: fullName,
-        phone: phone,
-      },
-    },
-  });
-  if (error) throw error;
-  return data;
-};
-
-// Đăng nhập user trực tiếp lên Supabase Auth
-export const loginUser = async ({ email, password }) => {
-  const { data, error } = await supabase.auth.signInWithPassword({
-    email,
-    password,
-  });
-  if (error) throw error;
-  return data;
-};

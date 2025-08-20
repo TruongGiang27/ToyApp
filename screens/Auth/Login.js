@@ -1,7 +1,7 @@
 import React, { useState ,useEffect} from 'react';
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
-import { loginUser } from '../../reduxtollkit/userSlice'; // với Login.js
+import { loginUser } from '../../reduxtollkit/UserSlice'; // với Login.js
 
 
 const PRIMARY_COLOR = "#FFC107";
@@ -22,7 +22,6 @@ const Login = ({ navigation }) => {
     const handleLogin = () => {
         dispatch(loginUser({ email: email, password_hash }));
     };
-
 
     return (
         <View style={styles.container}>
