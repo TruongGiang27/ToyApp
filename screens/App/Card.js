@@ -8,7 +8,7 @@ import {
   Image,
 } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
-import Navbar from "../components/Navbar";
+// import Navbar from "../components/Navbar";
 
 const Card = ({ navigation }) => {
   const [productList, setProductList] = useState([
@@ -129,7 +129,7 @@ const Card = ({ navigation }) => {
         </TouchableOpacity>
       </View>
 
-      <Navbar />
+      {/* <Navbar /> */}
     </View>
   );
 };

@@ -23,7 +23,7 @@ const Home = () => {
   ];
   useEffect(() => {
     dispatch(getAllProduct())
-  },[dispatch]);
+  }, [dispatch]);
   const renderItem = ({ item }) => (
     <TouchableOpacity
       style={styles.card}
